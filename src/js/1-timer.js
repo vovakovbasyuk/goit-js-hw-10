@@ -38,6 +38,7 @@ const timerEl = {
 const btnElement = document.querySelector('button');
 btnElement.addEventListener('click', () => {
   btnElement.disabled = true;
+  myInput.disabled = true;
   const setIntervalId = setInterval(() => {
     const currentTime = Date.now();
     const diff = userSelectedDate - currentTime;
@@ -46,7 +47,7 @@ btnElement.addEventListener('click', () => {
   }, 1000);
   setTimeout(() => {
     clearInterval(setIntervalId);
-  }, timeObj);
+  }, userSelectedDate - Date.now());
 });
 
 function updateTimerDisplay(timeObj) {

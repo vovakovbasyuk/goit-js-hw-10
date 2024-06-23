@@ -18,7 +18,7 @@ formEl.addEventListener('submit', event => {
       });
     })
     .catch(error => {
-      IziToast.show({
+      iziToast.show({
         message: `❌ Rejected promise in ${delayINT}ms`,
         backgroundColor: 'red',
         messageColor: 'white',
